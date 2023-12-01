@@ -30,7 +30,7 @@ public class RegistroServlet extends HttpServlet {
     UsuarioDAO usuarioDAO = new UsuarioDAO();
     usuarioDAO.inserirUsuario(novoUsuario);
 
-    response.sendRedirect("cadastrarFazenda.jsp");
+    response.sendRedirect("fazenda.jsp");
   }
 
   private String hashPassword(String password) {

@@ -17,6 +17,7 @@ public class UsuarioDAO {
   private static final String BUSCAR_USUARIO_POR_ID = "SELECT * FROM usuarios WHERE id=?";
   private static final String DELETAR_USUARIO = "DELETE FROM usuarios WHERE id=?";
 
+
   public void inserirUsuario(Usuario usuario) {
     try (Connection conexao = ConexaoBancoDados.obterConexao();
          PreparedStatement pstmt = conexao.prepareStatement(INSERIR_USUARIO)) {
@@ -55,6 +56,7 @@ public class UsuarioDAO {
 
     return usuarios;
   }
+
   public void atualizarUsuario(Usuario usuario) {
     try (Connection conexao = ConexaoBancoDados.obterConexao();
          PreparedStatement pstmt = conexao.prepareStatement(ATUALIZAR_USUARIO)) {
@@ -108,5 +110,4 @@ public class UsuarioDAO {
       System.err.println("Erro ao deletar usuário: " + e.getMessage());
     }
   }
-
 }

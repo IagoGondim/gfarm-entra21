@@ -1,6 +1,7 @@
 package entities;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Usuario implements Serializable {
   private static final long serialVersionUID = 1L;
@@ -9,14 +10,17 @@ public class Usuario implements Serializable {
   private String cpf;
   private String email;
   private String password;
+  private List<Fazenda> fazendas;
 
-  public Usuario(int id, String nome, String cpf, String email, String password) {
+  public Usuario(int id, String nome, String cpf, String email, String password, List<Fazenda> fazendas) {
     this.id = id;
     this.nome = nome;
     this.cpf = cpf;
     this.email = email;
     this.password = password;
+    this.fazendas = fazendas;
   }
+
 
   public Usuario() {
 
@@ -62,6 +66,14 @@ public class Usuario implements Serializable {
     this.password = password;
   }
 
+  public List<Fazenda> getFazendas() {
+    return fazendas;
+  }
+
+  public void setFazendas(List<Fazenda> fazendas) {
+    this.fazendas = fazendas;
+  }
+
   @Override
   public String toString() {
     return "Usuario{" +
@@ -70,8 +82,7 @@ public class Usuario implements Serializable {
             ", cpf='" + cpf + '\'' +
             ", email='" + email + '\'' +
             ", password='" + password + '\'' +
+            ", fazendas=" + fazendas +
             '}';
   }
-
-
 }
