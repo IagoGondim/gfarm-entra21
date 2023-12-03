@@ -54,7 +54,10 @@
 
 <div id="listarFazendas" class="hidden">
     <h2>Listar Fazendas</h2>
-    <button  class="btn btn-primary" onclick="mostrarConteudo('listarFazendas')">Listar Todas as Fazendas</button>
+    <!-- Formulário para chamar o ListarFazendasServlet -->
+    <form action="ListarFazendasServlet" method="get">
+        <button type="submit" class="btn btn-primary">Listar Todas as Fazendas</button>
+    </form>
 </div>
 
 <div id="buscarFazendaPorId" class="hidden">
@@ -85,7 +88,7 @@
 
 <div id="deletarFazenda" class="hidden">
     <h2>Deletar Fazenda</h2>
-    <form action="DeletarFazendaServlet" method="post">
+    <form action="DeletarFazendaPorIdServlet" method="post">
         <label for="idDeletar" class="form-label">ID da Fazenda a Deletar:</label>
         <input type="number" name="idDeletar" id="idDeletar" class="form-control" required><br>
 
