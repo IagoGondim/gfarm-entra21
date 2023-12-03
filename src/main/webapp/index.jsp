@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="./style/reset.css">
 
 </head>
-<body>
+<body class=" mx-auto "
+        style="margin-top: 30vh">
 
 
 <div class="card text-center containerWrapper">
