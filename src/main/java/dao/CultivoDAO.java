@@ -34,7 +34,7 @@ public class CultivoDAO {
         }
     }
 
-    public List<Cultivo> listarLotes() {
+    public List<Cultivo> listarCultivos() {
         List<Cultivo> cultivos = new ArrayList<>();
 
         try (Connection conexao = ConexaoBancoDados.obterConexao();
